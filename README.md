@@ -83,3 +83,53 @@ Add these gems to your `Gemfile`.
 Install the gems.
 
     bundle install
+
+Run the `webpacker` generators.
+
+    bundle exec rails webpacker:install
+    bundle exec rails webpacker:install:react
+
+Commit this to git (or else you cannot run the generator unless you pass the option `--ignore-warnings`).
+
+See help for the generator.
+
+    bundle exec rails generate react_on_rails:install --help
+
+Install `react_on_rails` with `redux` included.
+
+    bundle exec rails generate react_on_rails:install --redux
+
+You should see some output similar to:
+
+    What to do next:
+
+      - See the documentation on https://github.com/rails/webpacker/blob/master/docs/webpack.md
+        for how to customize the default webpack configuration.
+
+      - Include your webpack assets to your application layout.
+
+          <%= javascript_pack_tag 'hello-world-bundle' %>
+
+      - Run `rails s` to start the Rails server and use Webpacker's default lazy compilation.
+
+    Run the react_on_rails generator
+
+      - Visit http://localhost:3000/hello_world and see your React On Rails app running!
+
+      - Run bin/webpack-dev-server to start the Webpack dev server for compilation of Webpack
+        assets assets as soon as you save. This default setup with the dev server does not work
+        for server rendering
+
+      - Alternately, you may turn off compile in config/webpacker.yml and run the foreman
+        command to start the rails server and run webpack in watch mode.
+
+          foreman start -f Procfile.dev
+
+      - To turn on HMR, edit config/webpacker.yml and set HMR to true. Restart the rails server
+        and bin/webpack-dev-server. Or use Procfile.dev-server.
+
+      - To server render, change this line app/views/hello_world/index.html.erb to
+        `prerender: true` to see server rendering (right click on page and select "view source").
+
+          <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: true) %>
+
