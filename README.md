@@ -24,8 +24,8 @@ Initialize git.
 
 Copy these few lines into your `Gemfile`.
 
-  source 'https://rubygems.org'
-  gem 'rails', '~> 5.1'
+    source 'https://rubygems.org'
+    gem 'rails', '~> 5.1'
 
 Install rails and overwrite existing files.
 
@@ -39,3 +39,8 @@ Start your rails server.
     bundle exec rails s
 
 Visit localhost:3000.
+
+
+## Install rspec
+
+
