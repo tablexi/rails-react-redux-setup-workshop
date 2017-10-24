@@ -30,7 +30,7 @@ Copy these few lines into your `Gemfile`.
 Install rails and overwrite existing files.
 
     bundle install
-    bundle exec rails new . --force --skip-spring --skip-turbolinks --skip-test
+    bundle exec rails new . --force --skip-spring --skip-turbolinks --skip-coffee --skip-test
 
 Notice we don't use the `--webpack=WEBPACK` flag; this may change in the future.
 
