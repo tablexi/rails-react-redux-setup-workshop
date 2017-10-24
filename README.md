@@ -190,3 +190,21 @@ And add the following.
 Then run your tests.
 
     yarn test
+
+
+## Update .babelrc
+
+Overwrite your `.babelrc` with only this.
+
+    {
+      "presets": [
+        "es2015",
+        "stage-2",
+        "react"
+      ]
+    }
+
+Add additional babel presets.
+
+    yarn add babel-preset-es2015 babel-preset-stage-2
+
