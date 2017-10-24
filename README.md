@@ -175,3 +175,18 @@ Add scripts to your `package.json`.
 And then run tests to verify.
 
     yarn test
+
+
+## Create a simple test
+
+    touch app/javascript/bundles/HelloWorld/components/__tests__/HelloWorld.test.jsx
+
+And add the following.
+
+    it ('works', () => {
+      expect(true).toEqual(true)
+    })
+
+Then run your tests.
+
+    yarn test
