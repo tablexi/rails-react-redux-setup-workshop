@@ -133,3 +133,13 @@ You should see some output similar to:
 
           <%= react_component("HelloWorldApp", props: @hello_world_props, prerender: true) %>
 
+
+Install any new gems (i.e. `mini_racer`).
+
+    bundle install
+
+Restart rails server.
+
+    bundle exec rails s
+
+And visit `http://localhost:3000/hello_world`.
