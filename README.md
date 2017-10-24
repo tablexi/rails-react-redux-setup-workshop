@@ -59,6 +59,22 @@ Ensure rspec can run.
     bundle exec rspec
 
 
+## Install nvm
+
+    brew install nvm  # assuming macOS with homebrew
+    nvm install v6.9.1
+    nvm use v6.9.1
+
+Verify node works.
+
+    node -v
+
+Create `.nvmrc` which is similar to `ruby-version`.
+
+    touch .nvmrc
+    echo '6.9.1' >> .nvmrc
+
+
 ## Install yarn
 
     brew install yarn  # assuming macOS with homebrew
