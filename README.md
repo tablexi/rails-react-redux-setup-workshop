@@ -159,3 +159,19 @@ Restart rails server.
     bundle exec rails s
 
 And visit `http://localhost:3000/hello_world`.
+
+
+## Setup javascript testing
+
+    yarn add --dev jest enzyme react-test-renderer
+
+Add scripts to your `package.json`.
+
+    "scripts": {
+      "test": "jest app",
+      "test:watch": "jest app --onlyChanged --watch"
+    },
+
+And then run tests to verify.
+
+    yarn test

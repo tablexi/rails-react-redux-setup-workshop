@@ -1,6 +1,10 @@
 {
   "name": "rails-react-redux-setup",
   "private": true,
+  "scripts": {
+    "test": "jest app",
+    "test:watch": "jest app --onlyChanged --watch"
+  },
   "dependencies": {
     "@rails/webpacker": "^3.0.2",
     "babel-preset-react": "^6.24.1",
@@ -13,6 +17,9 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "enzyme": "^3.1.0",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0",
     "webpack-dev-server": "^2.9.3"
   }
 }
