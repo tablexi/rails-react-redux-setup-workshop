@@ -208,3 +208,23 @@ Add additional babel presets.
 
     yarn add babel-preset-es2015 babel-preset-stage-2
 
+
+## Create a snapshot
+
+    touch app/javascript/bundles/HelloWorld/components/__tests__/HelloWorld.test.jsx
+
+And copy in the following.
+
+    import React from 'react';
+    import ShallowRenderer from 'react-test-renderer/shallow';
+    import HelloWorld from '../HelloWorld';
+
+    describe('<HelloWorld />', () => {
+      it('renders', () => {
+        const renderer = new ShallowRenderer();
+        const tree = renderer.render(
+          <HelloWorld name='Stranger' />
+        );
+        expect(tree).toMatchSnapshot();
+      });
+    });
